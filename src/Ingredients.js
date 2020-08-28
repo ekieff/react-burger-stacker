@@ -1,5 +1,15 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 
 export default function Ingredients(props) {
-    return <h1>These are the ingredients</h1>
+    let ingredients= props.ingredients.map((f,i) => {
+        return <button key={i} handleclick={console.log(i)}>{f.name}</button>
+    })
+    
+    console.log(props.ingredients)
+    return (
+        <>
+        <div>{ingredients}</div>
+        </>
+    )
+
 }

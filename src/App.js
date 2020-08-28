@@ -1,9 +1,9 @@
-import React from 'react';
-import './App.css';
-import Burger from './Burger'
-import IngredientList from './IngredientList'
-
-let ingredients = [
+import React, {useState} from 'react';
+import '/Style.css';
+import BurgerPane from './BurgerPane';
+import IngredientList from './IngredientList';
+//
+let ingredientSeed = [
   {name: 'Kaiser Bun', color: 'saddlebrown'},
   {name: 'Sesame Bun', color: 'sandybrown'},
   {name: 'Gluten Free Bun', color: 'peru'},
@@ -15,16 +15,19 @@ let ingredients = [
   {name: 'Lettuce', color: 'lawngreen'},
   {name: 'Tomato', color: 'tomato'},
   {name: 'Bacon', color: 'maroon'},
-  {name: 'Onion', color: 'lightyellow'}
-]
+  {name: 'Onion', color: 'lightyellow'},
+];
 
-function App() {
+function App(props) {
+  //
+
   return (
-    <div className="App">
-      <IngredientList ingredients={ingredients}/>
-      <Burger ingredients={ingredients}/>
+    <div>
+      <IngredientList/>
+      <BurgerPane />
+      
     </div>
-  );
+  )
 }
 
 export default App;
